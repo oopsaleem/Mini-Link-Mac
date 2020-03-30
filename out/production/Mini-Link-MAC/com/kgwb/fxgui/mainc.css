@@ -1,0 +1,12 @@
+
+.table-row-cell:selected {
+   -fx-background-color: #5C7CFF;
+}
+.table-row-cell:selected .text {
+       -fx-fill: white ;
+
+}
+
+.button {
+-fx-background-radius: 7px;
+}

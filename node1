@@ -1,0 +1,61 @@
+ role uni
+ bridge-port
+  maxfs 2000
+  no mac-whitelist
+  admit untagged priority-tagged vlan-tagged
+  pvid 0
+  no stormctrl bc
+  no stormctrl mc
+  no stormctrl dlf
+  stormctrl maxbcbw 100
+  stormctrl maxmcbw 100
+  stormctrl maxdlfbw 100
+  no max-learned-addresses
+  no forbidden-egressports
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  l2cp lldp discard
+  l2cp esmc discard
+
+
+
+
+
+
+
+
+
+  default-network-priority 0
+  trusted ctagPcp
+  user-priority-mapping 0 0
+  user-priority-mapping 1 1
+  user-priority-mapping 2 2
+  user-priority-mapping 3 3
+  user-priority-mapping 4 4
+  user-priority-mapping 5 5
+  user-priority-mapping 6 6
+  user-priority-mapping 7 7
+
+
+
+
+
+
+
+  deep-buffering
+  scheduler-profile 10
+  queue-set-profile 5
+
+

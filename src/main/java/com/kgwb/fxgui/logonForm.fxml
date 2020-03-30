@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="200.0" minWidth="380.0" prefHeight="200.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kgwb.fxgui.LogonController">
+    <center>
+        <GridPane alignment="CENTER" hgap="2.0" vgap="2.0">
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0"/>
+                <RowConstraints/>
+            </rowConstraints>
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <Label text="User Name:"/>
+            <Label text="Password:" GridPane.rowIndex="1"/>
+            <TextField fx:id="userTextField" promptText="username" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS"/>
+            <PasswordField fx:id="pwBox" promptText="password" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" text="Remember me" GridPane.columnIndex="1"
+                      GridPane.hgrow="ALWAYS" GridPane.rowIndex="2"/>
+            <Text fx:id="actionResultText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="Invalid username or password." GridPane.columnSpan="2147483647" GridPane.halignment="LEFT"
+                  GridPane.rowIndex="3"/>
+        </GridPane>
+    </center>
+    <top>
+        <Label text="Welcome! Please enter your use name and password." BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="20.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <left>
+        <ImageView fx:id="loginIcon" fitHeight="63.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </ImageView>
+    </left>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <bottom>
+        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints/>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <FlowPane alignment="CENTER_RIGHT" hgap="5.0" prefHeight="30.0" prefWidth="334.0" vgap="5.0"
+                      GridPane.rowIndex="1">
+                <Button fx:id="logonButton" mnemonicParsing="false" onAction="#logonButtonAction" text="Log On"/>
+                <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonAction" text="Cancel"/>
+            </FlowPane>
+            <Separator prefWidth="200.0"/>
+        </GridPane>
+    </bottom>
+</BorderPane>

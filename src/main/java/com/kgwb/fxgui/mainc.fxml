@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox accessibleHelp="" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kgwb.fxgui.Controller">
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+        <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+        </padding>
+        <Label text="Node List Path :" HBox.hgrow="ALWAYS" />
+        <TextField fx:id="urlTextEntry" editable="false" HBox.hgrow="ALWAYS" />
+        <Button fx:id="btnChangePathAndRun" text="Select File ..." HBox.hgrow="ALWAYS" />
+        <Button fx:id="btnRun" text="Start" HBox.hgrow="ALWAYS" />
+        <Button fx:id="btnExport" text="Export to XLSX" HBox.hgrow="ALWAYS" />
+        <Separator orientation="VERTICAL" visible="false" HBox.hgrow="ALWAYS" />
+        <Label text="Filter:" visible="false " HBox.hgrow="ALWAYS" />
+        <TextField fx:id="filterTextEntry" visible="false" HBox.hgrow="ALWAYS" />
+        <Separator orientation="VERTICAL" visible="false" HBox.hgrow="ALWAYS" />
+        <Label text="Pro-active:" visible="false" HBox.hgrow="ALWAYS" />
+        <Spinner fx:id="spinnerProactive" maxWidth="60" minWidth="60" visible="false" HBox.hgrow="ALWAYS">
+            <valueFactory>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory amountToStepBy="1" max="50" min="0" />
+            </valueFactory>
+        </Spinner>
+        <Label text="\%" visible="false" HBox.hgrow="ALWAYS" />
+        <!--        <Label maxWidth="-1.0" text="Right status" HBox.hgrow="NEVER" />-->
+<!--        <Button fx:id="btnAbout" text="about" HBox.hgrow="NEVER" />-->
+    </HBox>
+    <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+        <AnchorPane fx:id="contentAnchorPane" VBox.vgrow="ALWAYS" />
+    </ScrollPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+        <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+        </padding>
+        <!--        <Label fx:id="leftStatusLabel" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="." HBox.hgrow="ALWAYS" />-->
+        <Pane HBox.hgrow="ALWAYS" />
+        <!--        <Button fx:id="cancelProgress" maxWidth="-1.0" text="Stop" visible="false" HBox.hgrow="NEVER" />-->
+        <ProgressBar fx:id="progress" progress="NaN" visible="false" HBox.hgrow="NEVER" />
+        <Label fx:id="rightStatusLabel" text="Done" HBox.hgrow="NEVER" />
+    </HBox>
+</VBox>
